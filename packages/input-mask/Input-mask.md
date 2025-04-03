@@ -31,7 +31,7 @@ const [value, setValue] = useState("");
   onValueChange={setValue}
   placeholder="Enter credit card number"
   guide
-/>
+/>;
 ```
 
 ## Hooks
@@ -67,7 +67,7 @@ const { onChange } = useInputMask(
   InputMasks.TIME,
   undefined,
   value,
-  true
+  true,
 );
 
 <input
@@ -75,7 +75,7 @@ const { onChange } = useInputMask(
   onChange={onChange}
   value={value}
   placeholder="Enter time"
-/>
+/>;
 ```
 
 ## Built-in Masks
@@ -83,21 +83,21 @@ const { onChange } = useInputMask(
 ### Credit Card
 
 ```tsx
-InputMasks.CREDIT_CARD
+InputMasks.CREDIT_CARD;
 // Format: XXXX XXXX XXXX XXXX
 ```
 
 ### Time
 
 ```tsx
-InputMasks.TIME
+InputMasks.TIME;
 // Format: HH:MM
 ```
 
 ### ISO Date
 
 ```tsx
-InputMasks.ISO_DATE
+InputMasks.ISO_DATE;
 // Format: YYYY-MM-DD
 ```
 
@@ -146,7 +146,7 @@ const uppercasePipe = (value: string) => value.toUpperCase();
   pipe={uppercasePipe}
   value={value}
   onValueChange={setValue}
-/>
+/>;
 ```
 
 ## Best Practices
@@ -171,6 +171,7 @@ const uppercasePipe = (value: string) => value.toUpperCase();
 ## Styling
 
 Components can be styled using:
+
 - CSS modules
 - Theme variables
 - Inline styles
@@ -203,4 +204,4 @@ Components can be used with other form components:
     }}
   />
 </Form>
-``` 
+```

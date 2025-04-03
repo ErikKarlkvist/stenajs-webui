@@ -34,7 +34,7 @@ const [dateRange, setDateRange] = useState<DateRange>({
   setFocusedInput={setFocusedInput}
   minDate={new Date(2020, 0, 1)}
   maxDate={new Date(2025, 11, 31)}
-/>
+/>;
 ```
 
 ### SingleDateCalendar
@@ -59,7 +59,7 @@ const [date, setDate] = useState<Date | undefined>(new Date());
   onChange={setDate}
   minDate={new Date(2020, 0, 1)}
   maxDate={new Date(2025, 11, 31)}
-/>
+/>;
 ```
 
 ### MultiDateCalendar
@@ -84,7 +84,7 @@ const [dates, setDates] = useState<Date[]>([]);
   onChange={setDates}
   minDate={new Date(2020, 0, 1)}
   maxDate={new Date(2025, 11, 31)}
-/>
+/>;
 ```
 
 ## Input Components
@@ -121,7 +121,7 @@ const [dateRange, setDateRange] = useState<DateRange>({
   placeholderStartDate="From"
   placeholderEndDate="To"
   width="150px"
-/>
+/>;
 ```
 
 ### DateInput
@@ -151,7 +151,7 @@ const [date, setDate] = useState<Date | undefined>(new Date());
   displayFormat="MM/dd/yyyy"
   placeholder="Choose date"
   width="150px"
-/>
+/>;
 ```
 
 ## Features
@@ -177,7 +177,7 @@ const [month, setMonth] = useState<Date>(new Date());
   onChange={setMonth}
   minDate={new Date(2020, 0, 1)}
   maxDate={new Date(2025, 11, 31)}
-/>
+/>;
 ```
 
 ### YearPicker
@@ -201,7 +201,7 @@ const [year, setYear] = useState<Date>(new Date());
   onChange={setYear}
   minDate={new Date(2020, 0, 1)}
   maxDate={new Date(2025, 11, 31)}
-/>
+/>;
 ```
 
 ## Best Practices
@@ -225,6 +225,7 @@ const [year, setYear] = useState<Date>(new Date());
 ## Styling
 
 Components can be styled using:
+
 - CSS modules
 - Theme customization
 - Custom calendar themes
@@ -257,4 +258,4 @@ Components can be used together to create complex date selection interfaces:
     </Column>
   </Row>
 </Box>
-``` 
+```

@@ -186,6 +186,7 @@ A collapsible panel component.
 ## Styling
 
 Components can be styled using:
+
 - CSS modules
 - Class name props
 - Theme customization
@@ -223,4 +224,4 @@ Components can be used together to create complete layouts:
     </Column>
   </Row>
 </>
-``` 
+```

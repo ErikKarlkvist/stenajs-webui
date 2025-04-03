@@ -37,7 +37,7 @@ const [isOpen, setIsOpen] = useState(false);
       <SecondaryButton label="Cancel" onClick={() => setIsOpen(false)} />
     </ButtonGroup>
   </ModalFooter>
-</Modal>
+</Modal>;
 ```
 
 ### Drawer
@@ -72,7 +72,7 @@ const [isOpen, setIsOpen] = useState(false);
   <Box spacing={2} indent={2}>
     <p>Drawer content goes here</p>
   </Box>
-</Drawer>
+</Drawer>;
 ```
 
 ### Window
@@ -114,7 +114,7 @@ const [isOpen, setIsOpen] = useState(false);
     <LabelledTextInput label="Name" value={name} onValueChange={setName} />
     <LabelledTextInput label="Email" value={email} onValueChange={setEmail} />
   </Form>
-</Window>
+</Window>;
 ```
 
 ## Imperative Modals
@@ -268,6 +268,7 @@ A footer component for modals.
 ## Styling
 
 Components can be styled using:
+
 - CSS modules
 - Theme variables
 - Inline styles
@@ -309,4 +310,4 @@ Components can be used together to create complex modal interfaces:
     </ButtonGroup>
   </ModalFooter>
 </Window>
-``` 
+```

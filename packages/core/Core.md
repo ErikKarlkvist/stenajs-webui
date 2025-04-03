@@ -226,6 +226,7 @@ const isHovered = useMouseIsOver(ref);
 ## Styling
 
 Components can be styled using:
+
 - CSS modules
 - Theme variables
 - Inline styles
@@ -255,4 +256,4 @@ Components can be used together to create complex layouts:
     </Column>
   </Row>
 </Box>
-``` 
+```

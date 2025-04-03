@@ -43,7 +43,7 @@ const [value, setValue] = useState("");
   iconLeft={faSearch}
   variant="standard"
   onEnter={() => console.log("Enter pressed")}
-/>
+/>;
 ```
 
 ### TextArea
@@ -70,7 +70,7 @@ const [value, setValue] = useState("");
   placeholder="Enter description"
   rows={4}
   resize="vertical"
-/>
+/>;
 ```
 
 ### NumericTextInput
@@ -99,7 +99,7 @@ const [value, setValue] = useState<number | undefined>(0);
   max={100}
   step={1}
   placeholder="Enter number"
-/>
+/>;
 ```
 
 ### PasswordInput
@@ -125,7 +125,7 @@ const [showPassword, setShowPassword] = useState(false);
   onValueChange={setValue}
   placeholder="Enter password"
   showPassword={showPassword}
-/>
+/>;
 ```
 
 ## Selection Components
@@ -152,7 +152,7 @@ const [checked, setChecked] = useState(false);
   onValueChange={setChecked}
   indeterminate={false}
   size="standard"
-/>
+/>;
 ```
 
 ### RadioButton
@@ -171,11 +171,7 @@ A radio button component for single selection.
 ```tsx
 const [selected, setSelected] = useState(false);
 
-<RadioButton
-  value={selected}
-  onValueChange={setSelected}
-  label="Option 1"
-/>
+<RadioButton value={selected} onValueChange={setSelected} label="Option 1" />;
 ```
 
 ### Switch
@@ -194,11 +190,7 @@ A switch component for boolean values.
 ```tsx
 const [enabled, setEnabled] = useState(false);
 
-<Switch
-  value={enabled}
-  onValueChange={setEnabled}
-  label="Enable feature"
-/>
+<Switch value={enabled} onValueChange={setEnabled} label="Enable feature" />;
 ```
 
 ## Label Components
@@ -246,7 +238,7 @@ const [value, setValue] = useState("");
   onValueChange={setValue}
   required
   placeholder="Enter email"
-/>
+/>;
 ```
 
 ## Best Practices
@@ -271,6 +263,7 @@ const [value, setValue] = useState("");
 ## Styling
 
 Components can be styled using:
+
 - CSS modules
 - Theme customization
 - Inline styles
@@ -310,11 +303,7 @@ Components can be used together to create complex forms:
         label="I accept the terms and conditions"
       />
     </Row>
-    <Button
-      label="Register"
-      onClick={handleRegister}
-      disabled={!acceptTerms}
-    />
+    <Button label="Register" onClick={handleRegister} disabled={!acceptTerms} />
   </Column>
 </Box>
-``` 
+```

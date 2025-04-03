@@ -60,11 +60,7 @@ Same as PrimaryButton.
 #### Example Usage
 
 ```tsx
-<FlatButton
-  label="Edit"
-  onClick={handleEdit}
-  iconLeft={faEdit}
-/>
+<FlatButton label="Edit" onClick={handleEdit} iconLeft={faEdit} />
 ```
 
 ### ButtonGroup
@@ -105,12 +101,7 @@ A component for displaying FontAwesome icons.
 #### Example Usage
 
 ```tsx
-<Icon
-  icon={faUser}
-  color="var(--swui-primary-color)"
-  size={24}
-  spin
-/>
+<Icon icon={faUser} color="var(--swui-primary-color)" size={24} spin />
 ```
 
 ### CircledIcon
@@ -120,6 +111,7 @@ An icon displayed within a circle.
 #### Props
 
 Same as Icon, plus:
+
 - `background?: string` - Circle background color
 - `size?: number` - Circle size
 
@@ -225,11 +217,7 @@ A component for displaying tags or labels.
 #### Example Usage
 
 ```tsx
-<Chip
-  label="JavaScript"
-  onRemove={handleRemove}
-  variant="info"
-/>
+<Chip label="JavaScript" onRemove={handleRemove} variant="info" />
 ```
 
 ### Tag
@@ -269,6 +257,7 @@ A component for displaying metadata or categories.
 ## Styling
 
 Components can be styled using:
+
 - CSS modules
 - Theme variables
 - Inline styles
@@ -284,16 +273,8 @@ Components can be used together to create complex interfaces:
     <Row justifyContent="space-between" alignItems="center">
       <Text variant="bold">User Profile</Text>
       <ButtonGroup spacing={1}>
-        <FlatButton
-          label="Edit"
-          iconLeft={faEdit}
-          onClick={handleEdit}
-        />
-        <FlatButton
-          label="Delete"
-          iconLeft={faTrash}
-          onClick={handleDelete}
-        />
+        <FlatButton label="Edit" iconLeft={faEdit} onClick={handleEdit} />
+        <FlatButton label="Delete" iconLeft={faTrash} onClick={handleDelete} />
       </ButtonGroup>
     </Row>
   </CardHeader>
@@ -318,4 +299,4 @@ Components can be used together to create complex interfaces:
     </Column>
   </CardBody>
 </Card>
-``` 
+```

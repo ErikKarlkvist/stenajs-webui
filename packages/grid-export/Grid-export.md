@@ -124,13 +124,13 @@ You can provide custom formatters for specific columns to transform the data bef
 const formatters: CustomCellFormatters<User, keyof User> = {
   // Format role as uppercase
   role: (value) => value.toUpperCase(),
-  
+
   // Format email as lowercase
   email: (value) => value.toLowerCase(),
-  
+
   // Format date
   createdAt: (value) => new Date(value).toLocaleDateString(),
-  
+
   // Format currency
   salary: (value) => `$${value.toLocaleString()}`,
 };
@@ -160,6 +160,7 @@ const formatters: CustomCellFormatters<User, keyof User> = {
 ## Styling
 
 Components can be styled using:
+
 - CSS modules
 - Theme variables
 - Inline styles

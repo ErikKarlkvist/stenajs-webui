@@ -11,7 +11,11 @@ The main table component that provides a flexible and feature-rich grid implemen
 #### Props
 
 ```typescript
-interface StandardTableProps<TItem extends object, TColumnKey extends string, TColumnGroupKey extends string> {
+interface StandardTableProps<
+  TItem extends object,
+  TColumnKey extends string,
+  TColumnGroupKey extends string,
+> {
   variant?: StandardTableVariant; // 'relaxed' | 'standard' | 'condensed' | 'compact'
   tableId?: string;
   rowIndexOffset?: number;
@@ -55,12 +59,27 @@ interface StandardTableConfigBase<TItem, TColumnKey extends string> {
   showHeaderExpandCollapse?: boolean;
   enableExpandCollapse?: boolean;
   expandCollapseDisableResolver?: (item: TItem) => boolean;
-  renderRowExpansion?: (item: TItem, args: RowExpansionArgs) => ReactNode | undefined;
+  renderRowExpansion?: (
+    item: TItem,
+    args: RowExpansionArgs,
+  ) => ReactNode | undefined;
   disableInfiniteList?: boolean;
-  rowBackgroundResolver?: (item: TItem, selected: boolean) => string | RowBackgroundResolverColorCombination | undefined;
+  rowBackgroundResolver?: (
+    item: TItem,
+    selected: boolean,
+  ) => string | RowBackgroundResolverColorCombination | undefined;
   checkboxDisabledResolver?: (item: TItem) => boolean;
   enableGridCell?: boolean;
-  gridCellOptions?: Omit<UseGridCellOptions<string>, "colIndex" | "rowIndex" | "numRows" | "numCols" | "tableId" | "isEditable" | "onChange">;
+  gridCellOptions?: Omit<
+    UseGridCellOptions<string>,
+    | "colIndex"
+    | "rowIndex"
+    | "numRows"
+    | "numCols"
+    | "tableId"
+    | "isEditable"
+    | "onChange"
+  >;
   showHeaderCheckbox?: boolean;
   showRowCheckbox?: boolean;
   rowIndent?: boolean | number;
@@ -81,7 +100,11 @@ interface StandardTableConfigBase<TItem, TColumnKey extends string> {
 #### StandardTableColumnConfig
 
 ```typescript
-interface StandardTableColumnOptions<TItem, TItemValue, TColumnKey extends string> {
+interface StandardTableColumnOptions<
+  TItem,
+  TItemValue,
+  TColumnKey extends string,
+> {
   columnLabel?: string;
   infoIconTooltipText?: string;
   minWidth?: string;
@@ -95,10 +118,22 @@ interface StandardTableColumnOptions<TItem, TItemValue, TColumnKey extends strin
   itemLabelFormatter?: (value: TItemValue, item: TItem) => string;
   isEditable?: boolean | ((item: TItem) => boolean);
   onChange?: (item: TItem, value: string | undefined) => void;
-  onKeyDown?: (ev: React.KeyboardEvent<HTMLDivElement>, args: StandardTableOnKeyDownArgs<TItem, TColumnKey>) => void;
+  onKeyDown?: (
+    ev: React.KeyboardEvent<HTMLDivElement>,
+    args: StandardTableOnKeyDownArgs<TItem, TColumnKey>,
+  ) => void;
   disableGridCell?: boolean;
   disableGridCellFocus?: boolean;
-  gridCellOptions?: Omit<UseGridCellOptions<string>, "colIndex" | "rowIndex" | "numRows" | "numCols" | "tableId" | "isEditable" | "onChange">;
+  gridCellOptions?: Omit<
+    UseGridCellOptions<string>,
+    | "colIndex"
+    | "rowIndex"
+    | "numRows"
+    | "numCols"
+    | "tableId"
+    | "isEditable"
+    | "onChange"
+  >;
   sortOrderIconVariant?: SortOrderIconVariant;
   renderSummaryCell?: StandardTableSummaryCellRenderer<TItem>;
   summaryText?: StandardTableSummaryTextProvider<TItem>;
@@ -109,42 +144,49 @@ interface StandardTableColumnOptions<TItem, TItemValue, TColumnKey extends strin
 ## Features
 
 ### Sorting
+
 - Internal and external sorting support
 - Custom sort order icons
 - Sort direction indicators
 - Disable sorting per column or globally
 
 ### Selection
+
 - Row selection with checkboxes
 - Header checkbox for selecting all rows
 - Disable selection per row
 - Custom selection state management
 
 ### Column Groups
+
 - Group columns under headers
 - Sticky column groups
 - Custom group ordering
 - Group-specific styling
 
 ### Sticky Elements
+
 - Sticky headers
 - Sticky columns
 - Sticky checkbox column
 - Custom z-index control
 
 ### Row Expansion
+
 - Expandable rows
 - Custom expansion content
 - Disable expansion per row
 - Expand/collapse all functionality
 
 ### Cell Editing
+
 - Editable cells
 - Custom cell renderers
 - Grid cell navigation
 - Keyboard support
 
 ### Summary Row
+
 - Custom summary cell renderers
 - Summary text providers
 - Column span control
@@ -177,12 +219,14 @@ interface StandardTableColumnOptions<TItem, TItemValue, TColumnKey extends strin
 The table supports various styling options:
 
 1. Table variants:
+
    - Relaxed
    - Standard
    - Condensed
    - Compact
 
 2. Column styling:
+
    - Background colors
    - Borders
    - Alignment
@@ -190,6 +234,7 @@ The table supports various styling options:
    - Custom cell renderers
 
 3. Row styling:
+
    - Background colors
    - Hover states
    - Selection states
@@ -245,4 +290,4 @@ const config: StandardTableConfig<User, keyof User> = {
 const UserTable = () => {
   return <StandardTable config={config} items={users} />;
 };
-``` 
+```

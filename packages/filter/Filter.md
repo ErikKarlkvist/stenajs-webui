@@ -11,7 +11,8 @@ A drawer component that displays the filter interface.
 #### Props
 
 ```typescript
-interface SearchFilterDrawerProps extends Omit<DrawerProps, "isOpen" | "onRequestClose"> {
+interface SearchFilterDrawerProps
+  extends Omit<DrawerProps, "isOpen" | "onRequestClose"> {
   header?: string;
   headerContentRight?: ReactNode;
 }
@@ -241,6 +242,7 @@ const FilterComponent = () => {
 ## Styling
 
 Components can be styled using:
+
 - CSS modules
 - Theme variables
 - Inline styles
@@ -295,4 +297,4 @@ const UserFilter = () => {
     </SearchFilterProvider>
   );
 };
-``` 
+```
